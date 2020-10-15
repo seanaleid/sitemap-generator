@@ -1,16 +1,16 @@
 const routes = [
   {
-    path: "/",
+    url: "/",
     changefreq: "monthly",
     priority: 1,
   },
   {
-    path: "/contact",
+    url: "/contact",
     changefreq: "monthly",
     priority: 1,
   },
   {
-    path: "/post/:slug",
+    url: "/post/:slug",
     changefreq: "monthly",
     priority: 1,
   },
