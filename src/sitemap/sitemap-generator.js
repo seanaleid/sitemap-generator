@@ -10,6 +10,7 @@ const writeStream = createWriteStream("./public/sitemap.xml");
 sitemap.pipe(writeStream);
 
 routes.map((x) => {
+  x.lastmod = new Date();
   sitemap.write(x);
 });
 // sitemap.write({
