@@ -1,8 +1,12 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-// import CSVReaderComp from "./csvreader.js";
+
+// csv parser package that allows you to select a csv file
+// from your computer and parses it in the browser
 import Papa from "papaparse";
-const csv = "./test_1.csv";
+
+// import CSVReaderComp from "./csvreader.js";
+// const csv = "./test_1.csv";
 
 const Box = styled.div`
   width: 100%;
@@ -34,11 +38,15 @@ const Form = () => {
     // console.log("Clicked me");
     Papa.parse(document.getElementById("csv-input").files[0], {
       delimiter: ",",
+      // with header turned to false, it mimics the data parsed from
+      // the python code
       header: false,
       skipEmptyLines: true,
+      // complete is needed to return the data from the parser
       complete: function (results) {
         // console.log(results);
         setUnits(results);
+        // slice the tasks from the second array in the data
         setTaskName(results.data[1].slice(3, 8));
       },
     });
