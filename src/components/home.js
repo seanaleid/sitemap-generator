@@ -8,9 +8,11 @@ const csv = "./src/components/test_1.csv";
 
 const Box = styled.div`
   width: 100%;
-  height: 100vh;
-  border: 1px solid black;
+  height: 900;
+  border: 3px solid black;
   background: dodgerblue;
+  padding: 10px;
+  border-radius: 10px;
 `;
 
 const Home = () => {

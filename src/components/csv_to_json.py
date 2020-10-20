@@ -307,8 +307,8 @@ def format_data_in_json(headers, data):
 
 ### LOGIC ###
 directory = "src/components/"
-title = "test_1.csv"
-filename = directory + title
+title = "./stepping_stone_data.csv"
+filename = title
 
 # DEMO - parse the CSV
 # parse_csv_demo()
